@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> zavd 1.1 </title>       
+    </head>
+    <body>        
+        <script>
+            function Zero(num){
+                if(num < 10){
+                    return "0" + number
+                }
+                else {
+                return num.toString();
+                }
+            }
+            const months = ['січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня', 'серпня', 'вересня', 'жовтня', 'листопада', 'грудня'];
+            const days = ['неділя', 'понеділок', 'вівторок', 'середа', 'четвер', 'пятниця', 'субота'];
+            const fer = new Date();       
+            var cos = Zero(fer.getHours())
+            var der = Zero(fer.getMinutes())
+            var fds = Zero(fer.getSeconds())
+            var lop = fer.getDay()
+            var niy = Zero(fer.getHours())
+            alert( 'Зараз '+ cos+ ':'+der+':'+fds + ', '+lop);
+        </script>
+    </body>
+</html>

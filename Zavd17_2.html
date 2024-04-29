@@ -1,0 +1,49 @@
+
+<html>
+<head>
+    <title>zavd 1.2</title>    
+</head>
+<body>        
+    <script>
+        function Random(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }   
+
+        function Game() {
+            var Datte = new Date().toLocaleString();
+            var fer = Random(0, 100);
+            var joi = 0;
+            var rew = parseInt(prompt("Введіть число від 0 до 100", 10));
+            joi++;     
+
+            while(rew !== fer) {
+                if (Math.abs(rew - fer) > 20) {
+                        alert('Дуже холодно');
+                    } else if (Math.abs(rew - fer) > 15) {
+                        alert('Холодніше');
+                    } else if (Math.abs(rew - fer) > 10) {
+                        alert('Тепліше');
+                    } else if (Math.abs(rew - fer) > 5) {
+                        alert('Дуже тепло');
+                    } else {
+                        alert('Гаряче');
+                    }
+                joi++;
+                rew = parseInt(prompt("Введіть число від 0 до 100", 10));
+                if(rew !== fer){
+                    alert(Datte+ " Спроба " +joi+" : число " + rew + " – не вірно")
+                }                
+            }
+            alert ('За ' + joi + ' спроб ви вгадали число ' + fer);
+        }            
+        Game();
+        var hek = confirm("Почнемо з початку?")
+        if(hek === false){
+            alert("слабак")
+        } 
+        else if(hek === true){
+        Game()
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> zavd 1.1 </title>
+        <style>
+            img {
+                width: 300;
+                height: 200;
+            }
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+        </style>
+    </head>
+    <body>        
+        <script>
+            function getCurrentTime() {
+    // Создаем объект Date
+    var now = new Date();
+    
+    // Получаем текущее время в формате "часы:минуты:секунды"
+    var time = `${addLeadingZero(now.getHours())}:${addLeadingZero(now.getMinutes())}:${addLeadingZero(now.getSeconds())}`;
+    
+    // Форматируем строку для вывода в alert()
+    var formattedTime = `Поточний час: ${time}`;
+    
+    // Выводим отформатированное время в alert()
+    alert(formattedTime);
+}
+
+// Функция добавления ведущего нуля, если число меньше 10
+function addLeadingZero(number) {
+    return number < 10 ? '0' + number : number;
+}
+
+// Вызываем функцию для получения и вывода текущего времени в alert()
+getCurrentTime();
+        </script>
+    </body>
+</html>
